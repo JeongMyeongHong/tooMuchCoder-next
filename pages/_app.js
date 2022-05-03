@@ -1,19 +1,24 @@
 import '@/styles/globals.css'
 import { Nav, Header, Layout, Footer} from '@/components'
 import { wrapper } from '@/modules/store.js'
-import styles from "@/styles/Header.module.css";
+import withReduxSaga from 'next-redux-saga';
+import "@/styles/globals.css";
+import PropTypes from "prop-types";
 
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component }) => {
   return (<div>
     <Nav/>
-      <Header className={styles.header}/>
+      <Header className='AppMinHeight'/>
       <Layout>
-        <Component {...pageProps} />
+        <Component/>
       </Layout>
       <Footer/>
       </div>
     )
 }
+App.propTypes = {
+  Component: PropTypes.elementType,
+};
 
-export default wrapper.withRedux(App)
+export default wrapper.withRedux(withReduxSaga(App))

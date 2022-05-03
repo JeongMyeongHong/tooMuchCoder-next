@@ -47,7 +47,6 @@ function* signin(action) {
             .log(" 로그인 서버다녀옴: " + JSON.stringify(result))
         yield put({type: LOGIN_SUCCESS, payload: result})
         yield put({type: SAVE_TOKEN, payload: result.token})
-        yield put(window.location.href = "/")
     } catch (error) {
         yield put({type: LOGIN_FAILURE, payload: error.message})
     }
