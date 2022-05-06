@@ -27,6 +27,8 @@ const LOGIN_SUCCESS = 'auth/LOGIN_SUCCESS';
 const LOGIN_FAILURE = 'auth/LOGIN_FAILURE';
 const LOGIN_CANCELLED = 'auth/LOGIN_CANCELLED';
 const LOGOUT_REQUEST = 'auth/LOGOUT_REQUEST';
+const LOGOUT_SUCCESS = 'auth/LOGOUT_SUCCESS';
+const LOGOUT_FAILURE = 'auth/LOGOUT_FAILURE';
 const SAVE_TOKEN = 'auth/SAVE_TOKEN';
 const DELETE_TOKEN = 'auth/DELETEE_TOKEN';
 
@@ -37,6 +39,7 @@ export const logoutRequest = createAction(LOGOUT_REQUEST, data => data)
 export function* loginSaga() {
     yield takeLatest(LOGIN_REQUEST, signin);
     yield takeLatest(LOGIN_CANCELLED, loginCancel);
+    yield takeLatest(LOGOUT_REQUEST, logout);
 }
 function* signin(action) {
     try {
@@ -76,6 +79,11 @@ const login = handleActions({
     [LOGIN_FAILURE]: (state, action) => ({
         ...state,
         loginError: action.payload
+    }),
+    [LOGOUT_SUCCESS]: (state, _action) => ({
+        ...state,
+        loginUser: null,
+        isLoggined: false
     }),
     [SAVE_TOKEN]: (state, action) => ({
         ...state,

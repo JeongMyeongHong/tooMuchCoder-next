@@ -74,9 +74,9 @@ export function Profile({loginUser}) {
                             <h1>{loginUser.name}</h1>
                                 <p className="title">CEO & Founder, Example</p>
                             <p>이메일: {loginUser.email}</p>
-                            <p>전화번호: {loginUser.Phone}</p>
-                            <p>생일: {loginUser.Birth}</p>
-                            <p>주소: {loginUser.Address}</p>
+                            <p>전화번호: {loginUser.phone}</p>
+                            <p>생일: {loginUser.birth}</p>
+                            <p>주소: {loginUser.address}</p>
                             <div
                                 style={{
                                     margin: "24px 0"
