@@ -34,7 +34,7 @@ const DELETE_TOKEN = 'auth/DELETEE_TOKEN';
 
 export const loginRequest = createAction(LOGIN_REQUEST, data => data)
 export const loginCancelled = createAction(LOGIN_CANCELLED, data => data)
-export const logoutRequest = createAction(LOGOUT_REQUEST, data => data)
+export const logoutRequest = createAction(LOGOUT_REQUEST)
 
 export function* loginSaga() {
     yield takeLatest(LOGIN_REQUEST, signin);
@@ -59,6 +59,22 @@ const loginAPI = payload => axios.post(
     payload,
     {headers}
 )
+
+function* logout() {
+    try {
+        alert(' logout 실행중 ')
+        const response = yield call(logoutAPI)
+        alert(` 로그아웃 성공: ${response.data.message}`)
+        yield put({type: LOGOUT_SUCCESS})
+        yield put({type: DELETE_TOKEN})
+        yield put(window.location.href = "/")
+    } catch (error) {
+        console.log(` 로그아웃 실패: ${error}`)
+        yield put({type: LOGOUT_FAILURE})
+    }
+}
+
+const logoutAPI = () => axios.get(`${SERVER}/user/logout`, {}, {headers})
 
 function* loginCancel(action) {
     try {

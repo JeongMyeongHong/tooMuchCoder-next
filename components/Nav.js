@@ -98,7 +98,10 @@ export function Nav(){
           </Box>
           {loginUser && <Box>
             <Button
-                onClick={() => dispatch(logoutRequest())}
+                onClick={() => {
+                  alert(`로그아웃 클릭`)
+                  dispatch(logoutRequest())
+                }}
                 sx={{
                     color: 'white',
                     display: 'block'
