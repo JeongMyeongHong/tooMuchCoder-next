@@ -8,7 +8,8 @@ export function Nav(){
         <a href='/'>Home</a><br/><br/>
         <a href='/auth/register'>회원가입</a><br/><br/>
         <a href='/auth/login'>로그인</a><br/><br/>
-        <a href='/'>해냈어요</a><br/><br/>
+        <a href='/tmc/mypage'>마이페이지</a><br/><br/>
+        <a href='/tmc/foodTable'>식단표</a><br/><br/>
     </Sidebar>
     </div>
   );
