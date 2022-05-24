@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { all } from "redux-saga/effects";
 import {HYDRATE} from "next-redux-wrapper"
-import counter, { counterSaga } from './basic/counter'
+import counter, { counterSaga } from './common/counter'
 import register, { registerSaga } from './auth/register'
 import login, { loginSaga } from './auth/login'
 
