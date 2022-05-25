@@ -12,7 +12,20 @@ const MypagePage = ({}) => {
             [name]: value
         })
     }
-    return (<Mypage onChange={onChange}/>);
+    const onSubmit = e => {
+        e.preventDefault()
+        const {name, value} = e.target;
+        setTable({
+            ...table,
+            [name]: value
+        })
+        alert(`정보 수정`)
+    }
+    const withdraw = e => {
+        e.preventDefault()
+        alert(`회원 탈퇴`)
+    }
+    return (<Mypage onChange={onChange} onSubmit={onSubmit} withdraw={withdraw}/>);
 };
 const mapStateToProps = state => ({})
 const MypageActions = {}

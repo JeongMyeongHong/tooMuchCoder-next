@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from '@/styles/Table.module.css'
 
-export function FoodTable({onChange, upload, addFavorite, makeDifferentDiet}){
+export function FoodTable({onChange, upload, addFavorite}){
     const dummy = {yoill:["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
      achim: ["시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과"], 
      jumsym: ["현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜"], 
@@ -43,7 +43,6 @@ export function FoodTable({onChange, upload, addFavorite, makeDifferentDiet}){
                 </tbody>
             </table>
             <button>즐겨찾기에 추가</button>
-            <button onClick={makeDifferentDiet}>다른 식단 짜기</button>
         </div>
     )
 }
