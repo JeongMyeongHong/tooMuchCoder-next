@@ -10,6 +10,7 @@ export function Nav(){
         <a href='/auth/login'>로그인</a><br/><br/>
         <a href='/tmc/mypage'>마이페이지</a><br/><br/>
         <a href='/tmc/foodtable'>나의 식단</a><br/><br/>
+        <a href='/tmc/tablemake'>식단관리</a><br/><br/>
     </Sidebar>
     </div>
   );

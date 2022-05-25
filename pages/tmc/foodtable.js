@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { Foodtable } from '@/components';
+import { FoodTable } from '@/components';
 
 const FoodtablePage = ({}) => {
     const [dummy, setDummy] = useState({yoill:'', achim:'', jumsym:'', joenyeok:''})
@@ -21,7 +21,7 @@ const FoodtablePage = ({}) => {
     const umakeDifferentDietpload = e => {
         e.preventDefault()
     }
-    return (<Foodtable onChange={onChange} upload={upload} addFavorite={addFavorite} makeDifferentDiet={umakeDifferentDietpload}/>);
+    return (<FoodTable onChange={onChange} upload={upload} addFavorite={addFavorite} makeDifferentDiet={umakeDifferentDietpload}/>);
 };
 const mapStateToProps = state => ({})
 const FoodtableActions = {}

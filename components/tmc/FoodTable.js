@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from '@/styles/Table.module.css'
 
-export function Foodtable({onChange, upload, addFavorite, makeDifferentDiet}){
+export function FoodTable({onChange, upload, addFavorite, makeDifferentDiet}){
     const dummy = {yoill:["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
      achim: ["시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과", "시리얼, 고구마, 푸른사과"], 
      jumsym: ["현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜", "현미밥, 진미채볶음, 구운소세지, 계란찜"], 
@@ -14,31 +14,33 @@ export function Foodtable({onChange, upload, addFavorite, makeDifferentDiet}){
                     <tr>
                         {dummy.yoill.map((data) => (<td key={data}>{data}</td>))}
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
-                        <td colspan="7">아침</td>
+                        <td colSpan="7">아침</td>
                     </tr>
                     <tr>
                         {dummy.achim.map((data) => (<td key={data}>{data}<button>이미지 업로드</button></td>))}                 
                     </tr>
                     <tr>
-                        <td colspan="7">점심</td>
+                        <td colSpan="7">점심</td>
                     </tr>
                     <tr>
                         {dummy.jumsym.map((data) => (<td key={data}>{data}<button>이미지 업로드</button></td>))}
                     </tr>
                     <tr>
-                        <td colspan="7">저녁</td>
+                        <td colSpan="7">저녁</td>
                     </tr>
                     <tr>
                         {dummy.joenyeok.map((data) => (<td key={data}>{data}<button>이미지 업로드</button></td>))}
                     </tr>
                     <tr>
-                        <td colspan="7">오늘의 보상</td>
+                        <td colSpan="7">오늘의 보상</td>
                     </tr>
                     <tr>
                         {dummy.bosang.map((data) => (<td key={data}>{data}</td>))}
                     </tr>
-                </thead>
+                </tbody>
             </table>
             <button>즐겨찾기에 추가</button>
             <button>다른 식단 짜기</button>
