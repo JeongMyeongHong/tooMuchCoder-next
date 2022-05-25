@@ -43,7 +43,7 @@ export function FoodTable({onChange, upload, addFavorite, makeDifferentDiet}){
                 </tbody>
             </table>
             <button>즐겨찾기에 추가</button>
-            <button>다른 식단 짜기</button>
+            <button onClick={makeDifferentDiet}>다른 식단 짜기</button>
         </div>
     )
 }

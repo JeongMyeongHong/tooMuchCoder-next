@@ -20,6 +20,7 @@ const FoodtablePage = ({}) => {
     }
     const umakeDifferentDietpload = e => {
         e.preventDefault()
+        window.location.href='/'
     }
     return (<FoodTable onChange={onChange} upload={upload} addFavorite={addFavorite} makeDifferentDiet={umakeDifferentDietpload}/>);
 };

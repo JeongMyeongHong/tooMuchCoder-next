@@ -3,13 +3,17 @@ import { connect, useDispatch } from 'react-redux';
 import { TableMake } from '@/components';
 
 const TableMakePage = ({}) => {
-    const [check, setCheck] = useState(false)
+    const [check, setCheck] = useState('0')
     const [table, setTable] = useState({blah:''})
-    const onClick = e => {
+    const addDiet = e => {
         e.preventDefault()
-        check ? setCheck(false):setCheck(true)
+        check =='0'? setCheck('1'):setCheck('0')
     }
-    return (<TableMake check={check} onClick={onClick}/>);
+    const setConditions = e => {
+        e.preventDefault()
+        check =='0'? setCheck('2'):setCheck('0')
+    }
+    return (<TableMake check={check} addDiet={addDiet} setConditions={setConditions}/>);
 };
 const mapStateToProps = state => ({})
 const TableMakeActions = {}
