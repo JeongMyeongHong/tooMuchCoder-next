@@ -1,5 +1,5 @@
 import styles from "@/styles/Layout.module.css";
-import { Modal, Pagination, Table } from '@/components'
+import { Pagination, Table } from '@/components'
 
 
 export function Layout({ children }){
@@ -8,7 +8,6 @@ export function Layout({ children }){
       <main className={styles.main}>{children}</main>
       <Table/>
       <Pagination/>
-      <Modal/>
     </div>
 
   );
