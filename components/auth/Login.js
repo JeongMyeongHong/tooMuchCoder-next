@@ -61,10 +61,10 @@ export function Login({onChange, onSubmit}) {
                             margin="normal"
                             required
                             fullWidth
-                            id="userid"
+                            id="username"
                             label="사용자 아이디"
-                            name="userid"
-                            autoComplete="userid"
+                            name="username"
+                            autoComplete="username"
                             autoFocus
                             onChange={onChange}/>
                         <TextField
