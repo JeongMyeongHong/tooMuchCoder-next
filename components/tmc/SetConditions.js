@@ -11,7 +11,8 @@ export function SetConditions({check, onClick}){
         <label><input type="checkbox" name="f" value="yyy"/>저녁 안먹어요</label><br/><br/>
         <label><input type="checkbox" name="f" value="yyy"/>할랄푸드 원해요</label><br/><br/>
         <label><input type="checkbox" name="f" value="yyy"/>비건푸드 원해요</label><br/><br/>
-        <label><input type="checkbox" name="g" value="yyy"/>또 뭐가 있을까요?</label>
+        <label><input type="checkbox" name="g" value="yyy"/>또 뭐가 있을까요?</label><br/><br/>
+        <button>저장하기</button>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from "react";
 import styles from '@/styles/Table.module.css'
 import Foodtable from "@/pages/tmc/foodtable";
 import SetConditionsPage from "@/pages/tmc/setConditions";
-import { ModalConditions } from "@/components/ModalConditions";
+import { ModalConditions } from "@/components";
 
 export function TableMake({check, addDiet, setConditions}){
     return (
